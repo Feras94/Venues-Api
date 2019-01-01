@@ -1,5 +1,6 @@
 ﻿using System;
 using Newtonsoft.Json;
+using Venues.Api.Convertors;
 
 namespace Venues.Api.ViewModels
 {
@@ -21,6 +22,7 @@ namespace Venues.Api.ViewModels
         public int Capacity { get; set; }
 
         [JsonProperty("createdAt")]
-        public DateTime CreatedAt { get; set; }
+        [JsonConverter(typeof(JsonDateTimeConvertor))]
+        public DateTime? CreatedAt { get; set; }
     }
 }
