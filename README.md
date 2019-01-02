@@ -11,6 +11,16 @@ Sample ASP.Net WebApi project for managing venues
 - Request Validation using [FluentValidation](https://github.com/JeremySkinner/FluentValidation).
 - Fully RESTfull API.
 
+## Usage
+
+1. Clone the project locally
+
+    `git clone https://github.com/Feras94/Venues-Api.git`
+
+2. Open in Visual Studio
+3. Restore Packages
+4. Build and Run
+
 ## Available Endpoints
 
 ### Get All Venues
