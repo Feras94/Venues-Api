@@ -212,6 +212,7 @@
     <Compile Include="Models\Database\ApplicationContext.cs" />
     <Compile Include="Models\Entities\Venue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validators\VenueVmValidator.cs" />
     <Compile Include="ViewModels\VenueVM.cs" />
   </ItemGroup>
   <ItemGroup>

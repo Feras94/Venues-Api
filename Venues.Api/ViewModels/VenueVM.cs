@@ -1,27 +1,33 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using FluentValidation.Attributes;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using Venues.Api.Convertors;
+using Venues.Api.Validators;
 
 namespace Venues.Api.ViewModels
 {
+    [Validator(typeof(VenueVmValidator))]
+    [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
     public class VenueVM
     {
-        [JsonProperty("id")]
+        [Display(Name = "id")]
         public int Id { get; set; }
 
-        [JsonProperty("name")]
+        [Display(Name = "name")]
         public string Name { get; set; }
 
-        [JsonProperty("address")]
+        [Display(Name = "address")]
         public string Address { get; set; }
 
-        [JsonProperty("type")]
+        [Display(Name = "type")]
         public string Type { get; set; }
 
-        [JsonProperty("capacity")]
+        [Display(Name = "capacity")]
         public int Capacity { get; set; }
 
-        [JsonProperty("createdAt")]
+        [Display(Name = "createdAt")]
         [JsonConverter(typeof(JsonDateTimeConvertor))]
         public DateTime? CreatedAt { get; set; }
     }
